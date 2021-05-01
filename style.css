@@ -1,0 +1,265 @@
+/*  ---------- 
+    MAIN
+ ----------  */
+
+/*---- FONTS ----*/
+
+:root {
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --mermaid-font: var(--default-font);
+    --reveal-font: var(--default-font);
+    --font-monospace: 'Source Code Pro', monospace;
+}
+
+body {
+    --editor-font-size: 14px;
+}
+
+.cm-header-1, .markdown-preview-view h1 {
+    font-size: 175%;
+    line-height: 200%;
+}
+
+.cm-header-2, .markdown-preview-view h2 {
+    font-size: 150%;
+    line-height: 180%;
+}
+
+.cm-header-3, .markdown-preview-view h3 {
+    font-size: 130%;
+    line-height: 160%;
+}
+
+.cm-header-4, .markdown-preview-view h4 {
+    font-size: 120%;
+    line-height: 150%;
+}
+
+.cm-header-5, .markdown-preview-view h5 {
+    font-size: 110%;
+    line-height: 150%;
+}
+
+.view-header-title {
+    font-size: 12px;
+    font-weight: 600;
+    overflow: auto;
+}
+
+/*---- PREVIEW MODE ----*/
+
+.markdown-embed .markdown-preview-view {
+    padding: 0;
+}
+
+.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+    border-left: 1px solid var(--background-modifier-border);
+    border-top: 0;
+    border-bottom: 0;
+    padding: 0 24px;
+    margin: 0;
+}
+
+div.markdown-preview-view {
+    font-family: var(--font-family-preview);
+}
+
+.markdown-preview-view blockquote {
+    border-radius: 0;
+    border: 0px solid var(--text-accent);
+    border-left-width: 5px;
+}
+
+/*---- NOTE TRANSCLUSION PREVIEW ----*/
+
+.markdown-embed-title, .file-embed-title {
+    font-size: 0;
+}
+
+.markdown-embed-title {
+    height: 0;
+}
+
+/*---- SIDE PANES ----*/
+
+.view-header, .workspace-ribbon.is-collapsed, .workspace-ribbon.mod-left.is-collapsed, .workspace-leaf.mod-active .view-header, .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header, .status-bar {
+    background-color: var(--background-primary);
+    border: none;
+}
+
+.workspace-leaf-resize-handle:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+/*---- YAML IN PREVIEW MODE ----*/
+
+.frontmatter-container {
+    border: none;
+    font-size: 14px;
+    color: var(--text-muted);
+    padding: 0;
+    background-color: var(--background-primary);
+}
+
+/*---- NOTE TITLE BAR ----*/
+
+.nav-file-title.is-active {
+    background-color: var(--background-nav-selected);
+    color: var(--text-nav-selected);
+}
+
+/*---- TAGS ----*/
+
+a.tag {
+    font-size: 10px;
+    color: var(--text-accent);
+    text-decoration: none;
+}
+
+/*  ----------  LIGHT THEME ----------  */
+
+.theme-light {
+    --background-inline-code: rgb(240, 240, 240);
+    --background-nav-alt: rgb(58, 62, 63);
+    --background-nav-file-tag: rgb(203, 77, 73);
+    --background-nav-selected: rgb(203, 77, 73);
+    --background-nav: rgb(41, 44, 46);
+    --background-primary: #fff;
+    --background-secondary-alt: #fff;
+    --background-secondary: #f5f6f8;
+    --background-tag: #b5b5b5;
+    --border-inline-code: rgb(215, 215, 215);
+    --code-block-background: #ffffff;
+    --code-block-border: #92a1a17a;
+    --font-family-editor: Avenir, "Avenir Next", "Avenir Next Cyr", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --font-family-preview: Avenir, "Avenir Next", "Avenir Next Cyr", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --interactive-accent: rgb(203, 77, 73);
+    --interactive-accent-muted: rgb(203, 77, 73, 0.5);
+    --interactive-accent-hover: rgb(203, 77, 73);
+    --scrollbar-bg: rgba(0, 0, 0, 0);
+    --scrollbar-thumb-bg: rgba(0, 0, 0, 0);
+    --text-accent: rgb(203, 77, 73);
+    --text-accent-hover: rgb(203, 77, 73);
+    --text-faint: rgb(150, 150, 150);
+    --text-header: rgb(44, 44, 44);
+    --text-highlight-bg: #b4ff0066;
+    --text-inline-code: rgb(45, 45, 45);
+    --text-nav-selected: rgb(255, 255, 255);
+    --text-nav: rgb(190, 190, 190);
+    --text-normal: rgb(44, 44, 44);
+    --text-normal-opposite: rgb(216, 216, 216);
+}
+
+
+/*  ----------  DARK THEME ----------  */
+
+.theme-dark {
+    --background-inline-code: rgb(41, 44, 46);
+    --background-nav-alt: rgb(58, 62, 63);
+    --background-nav-file-tag: rgb(205,133,63);
+    --background-nav-selected: rgb(73, 73, 73);
+    --background-nav: rgb(41, 44, 46);
+    --background-primary: rgb(28, 30, 32);
+    --background-tag: rgb(111, 112, 116);
+    --border-inline-code: rgb(76, 76, 76);
+    --code-block-background: rgb(32, 32, 32);
+    --code-block-border: rgb(77, 77, 77);
+    --color-title: #ffffff;
+    --color-axis: #ffffff;
+    --color-axis-label: #ffffff;
+    --color-tick-label: #ffffff;
+    --color-line: #ffffff;
+    --color-legend: #ffffff;
+    --color-dot-fill: #69b3a2;
+    --color-dot-stroke: none;
+    --color-tooltip-bg: #ffffff;
+    --color-tooltip-border: #000000;
+    --color-tooltip-label: #000000;
+    --font-family-editor: Avenir, "Avenir Next", "Avenir Next Cyr", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --font-family-preview: Avenir, "Avenir Next", "Avenir Next Cyr", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --interactive-accent: rgb(205,133,63);
+    --scrollbar-bg: rgba(0, 0, 0, 0);
+    --scrollbar-thumb-bg: rgba(0, 0, 0, 0);
+    --text-accent: rgb(205,133,63);
+    --text-faint: rgb(150, 150, 150);
+    --text-header: rgb(198, 213, 224);
+    --text-highlight-bg: #b4ff0066;
+    --text-inline-code: rgb(230, 230, 230);
+    --text-nav-selected: rgb(255, 255, 255);
+    --text-nav: rgb(190, 190, 190);
+    --text-normal: rgb(216, 216, 216);
+    --text-normal-oppsite: rgb(44, 44, 44);
+}
+
+/*  ----------------------------------  
+		PLUGINS
+-------------------------------------*/
+
+/*  ----------  CHECKLIST ----------  */
+
+.checklist-plugin-main {
+    --todoList-contentPadding: 0 5px 0 5px!important;
+    --todoList-tagSub: var(--text-accent);
+    --todoList-togglePadding: 0 5px 0 5px!important;
+    --todoList-checkboxSize: 15px!important;
+    --todoList-headerFontWeight: 400!important;
+    --todoList-headerFontSize: 16px!important;
+    --todoList-headerGap: 0!important;
+    --todoList-iconSize: 18px!important;
+    --todoList-countFontSize: 12px!important;
+}
+
+.tag-base.svelte-yzsyxo {
+    font-size: 0;
+}
+
+.day.svelte-q3wqg9 {
+    background-color: var(--color-background-day);
+    color: var(--color-text-day);
+    cursor: pointer;
+    font-size: 0.7em!important;
+    height: 100%;
+    padding: 0.2em!important;
+    position: relative;
+    text-align: center;
+    transition: background-color 0.1s ease-in, color 0.1s ease-in;
+    vertical-align: baseline;
+}
+
+/*  ----------  CALENDAR ----------  */
+
+#calendar-container .reset-button {
+    font-size: 12px!important;
+}
+
+#calendar-container .year {
+    color: var(--text-faint);
+    font-weight: 400;
+}
+
+#calendar-container .month {
+    color: var(--text-accent);
+    font-weight: 600;
+}
+
+#calendar-container .month, #calendar-container .title, #calendar-container .reset-button {
+    font-size: 18px;
+    text-transform: none;
+}
+
+/*  ----------  SLIDING PANES (ANDY'S MODE) ----------  */
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before, .view-header-title-container:after {
+    background: var(--background-primary)!important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    border: none!important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+    height: 15px;
+    top: 0;
+    bottom: unset;
+    background: var(--background-primary)!important;
+}
