@@ -157,7 +157,7 @@ a.tag {
     --background-inline-code: rgb(41, 44, 46);
     --background-nav-alt: rgb(58, 62, 63);
     --background-nav-file-tag: rgb(205,133,63);
-    --background-nav-selected: rgb(73, 73, 73);
+    --background-nav-selected: rgb(205,133,63);
     --background-nav: rgb(41, 44, 46);
     --background-primary: rgb(28, 30, 32);
     --background-tag: rgb(111, 112, 116);
