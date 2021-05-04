@@ -15,27 +15,27 @@ body {
     --editor-font-size: 14px;
 }
 
-.cm-header-1, .markdown-preview-view h1 {
+h1 {
     font-size: 175%;
     line-height: 200%;
 }
 
-.cm-header-2, .markdown-preview-view h2 {
+h2 {
     font-size: 150%;
     line-height: 180%;
 }
 
-.cm-header-3, .markdown-preview-view h3 {
+h3 {
     font-size: 130%;
     line-height: 160%;
 }
 
-.cm-header-4, .markdown-preview-view h4 {
+h4 {
     font-size: 120%;
     line-height: 150%;
 }
 
-.cm-header-5, .markdown-preview-view h5 {
+h5 {
     font-size: 110%;
     line-height: 150%;
 }
@@ -45,6 +45,75 @@ body {
     font-weight: 600;
     overflow: auto;
 }
+
+/* -------------------
+WYSIWYG style editor
+Credit: Piotr, Obsidian forum
+--------------------- */
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-strong,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-em,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-string.cm-url,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hmd-barelink,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-comment,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-tag {
+    display: none;
+}
+
+/* ----------------------------------
+auto fades status bar items 
+Credit: rsdimitrov, Obsidian forum 
+----------------------------------- */
+
+.status-bar:not(:hover) .status-bar-item {
+  opacity: 0.25;
+  transition: opacity .25s ease-in-out;
+}
+
+/* -----------------------------------
+Add quotation character before quote 
+Credit: Thery, Obsidian forum
+------------------------------------ */
+blockquote:before {
+  font: 14px/20px italic Times, serif;
+  content: "“";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p { display: inline; }
+
+/* ----------------------------------
+bigger link popup preview  
+Credit: _ph, Obsidian forum
+----------------------------------- */
+.popover.hover-popover {
+    transform: scale(0.8); /* makes the content smaller */
+    max-height: 800px;    /* was 300 */
+    min-height: 100px;
+    width: 500px;     /* was 400 */
+}
+
+/* -------------------------------------------
+outliner for the outline 
+Credit: Shamama, Obsidian forum
+-------------------------------------------- */
+.outline-heading-children{
+  border-left: 1px solid rgba(118,158,165,0.2);
+  border-radius:0 0px 0px 0;
+  transition:all 0.5s ease-in-out;
+}
+.outline-heading-children:hover{
+  border-left-color:rgba(118,158,165,0.4);
+}
+/* outliner for the file and folders */
+.nav-folder,.nav-file{
+  margin:0 !important;
+  border-left: 1px solid rgba(118,158,165,0.2);
+}
+
 
 /*---- PREVIEW MODE ----*/
 
@@ -116,6 +185,40 @@ a.tag {
     text-decoration: none;
 }
 
+/*---- LINES BETWEEN LIST LEVELS ----*/
+
+.cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
+.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+ content:'';
+ border-left: 1px solid var(--text-accent);
+ position: absolute;
+}
+
+.cm-hmd-list-indent .cm-tab::before { left: 0; top: -5px; bottom: -4px; 
+}
+
+ul ul::before { left: -11px; top: 0; bottom: 0; 
+} 
+
+/* ---------- CODE BLOCK (EDIT MODE) ------------- */
+
+.cm-s-obsidian .HyperMD-codeblock {
+    color: var(--text-accent)!important;
+}
+
+/* ---------- GRAPH ------------- */
+
+.graph-controls {
+    position: absolute;
+    background-color: var(--background-primary);
+    border: none;
+    opacity: 0;
+}
+
+.graph-controls:hover {
+    opacity: 1;
+}
+
 /*  ----------  LIGHT THEME ----------  */
 
 .theme-light {
@@ -141,7 +244,7 @@ a.tag {
     --text-accent: rgb(203, 77, 73);
     --text-accent-hover: rgb(203, 77, 73);
     --text-faint: rgb(150, 150, 150);
-    --text-header: rgb(44, 44, 44);
+    --text-header: rgb(203, 77, 73);
     --text-highlight-bg: #b4ff0066;
     --text-inline-code: rgb(45, 45, 45);
     --text-nav-selected: rgb(255, 255, 255);
