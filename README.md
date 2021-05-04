@@ -1,5 +1,8 @@
 # Obsidian Graphite Coast
- Custom Obsidian CSS with WYSIWYM editor, inspired by Red Graphite and California Coast themes
+Custom Obsidian CSS with WYSIWYM editor, inspired by Red Graphite and California Coast themes
+ 
+## Licence
+Do what you want with it!
  
 ## Installation
 1. Turn off any themes already in use.
