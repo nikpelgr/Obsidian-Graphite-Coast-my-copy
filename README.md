@@ -11,7 +11,7 @@ As mentioned, the original inspiration for this theme came from Red Graphite (fo
 
 Unless otherwise stated, all references originate from the Obsidian forum.
 
-- WYSIWYM editor - **Piotr**
+- (modified) WYSIWYM editor - **Piotr**
 - auto fades status bar - **rsdimitrov**
 - Add quotation character before quote - **Thery**
 - bigger link popup preview - **_ph**
