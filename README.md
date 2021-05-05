@@ -3,6 +3,19 @@ Custom Obsidian CSS with WYSIWYM editor, inspired by Red Graphite and California
  
 ## Licence
 Do what you want with it!
+
+## Attribution
+I don't consider myself a CSS developer. I know enough to get the things done that I need/want, albeit not necesseraily in the most code efficient way. So this theme contains a few snippets from those more talented in the CSS arena than I am in the Obsidian community. To acknowledge them, I wanted to put this attribution section high up this page, rather than buried at the bottom. 
+
+As mentioned, the original inspiration for this theme came from Red Graphite (font and accent colour) and California Coast (minimalist approach with lots of white space). Many thanks to seanwcom ([Red Graphite](https://github.com/seanwcom/Red-Graphite-for-Obsidian)) and mgmeyers ([California Coast](https://github.com/mgmeyers/obsidian-california-coast-theme))
+
+Unless otherwise stated, all references originate from the Obsidian forum.
+
+- WYSIWYM editor - **Piotr**
+- auto fades status bar - **rsdimitrov**
+- Add quotation character before quote - **Thery**
+- bigger link popup preview - **_ph**
+- outliner for the outline - **Shamama**
  
 ## Installation
 1. Turn off any themes already in use.
