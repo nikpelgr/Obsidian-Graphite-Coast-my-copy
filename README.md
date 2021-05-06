@@ -1,3 +1,7 @@
+# This is copy from this repo.
+## last update on 6/5/2021
+https://github.com/owenvachell/Obsidian-Graphite-Coast
+
 # Obsidian Graphite Coast
 Custom Obsidian CSS with WYSIWYM editor, inspired by Red Graphite and California Coast themes
  
