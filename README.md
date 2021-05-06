@@ -16,6 +16,7 @@ Unless otherwise stated, all references originate from the Obsidian forum.
 - Add quotation character before quote - **Thery**
 - bigger link popup preview - **_ph**
 - outliner for the outline - **Shamama**
+- list relationship lines - **Obsidian forum** (this appears in a lot of places, it's difficult to identify the original author)
  
 ## Installation
 1. Turn off any themes already in use.
