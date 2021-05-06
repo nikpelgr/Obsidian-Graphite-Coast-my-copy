@@ -6,13 +6,14 @@
 
 :root {
     --default-font: Avenir, "Avenir Next", "Avenir Next Cyr", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-    --mermaid-font: var(--default-font);
-    --reveal-font: var(--default-font);
-    --font-monospace: 'Source Code Pro', monospace;
 }
 
 body {
     --editor-font-size: 14px;
+}
+
+.cm-s-obsidian, .markdown-preview-view {
+  text-align: justify;
 }
 
 .markdown-preview-view h1 {
@@ -193,20 +194,28 @@ a.tag {
     text-decoration: none;
 }
 
-/*---- LINES BETWEEN LIST LEVELS ----*/
+/*---------------------------
+LIST RELATIONSHIP LINES 
+Credit: Obsidian forum (this appears in a lot of places,
+it's difficult to identify the original author)
+---------------------------*/
 
-.cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
-.cm-hmd-list-indent .cm-tab::before, ul ul::before {
- content:'';
- border-left: 1px solid var(--text-accent);
- position: absolute;
+.cm-tab, ul {
+    position: relative; 
 }
 
-.cm-hmd-list-indent .cm-tab::before { left: 0; top: -5px; bottom: -4px; 
+.cm-tab::before, ul ul::before {
+    content:'';
+    border-left: 1px solid var(--interactive-accent);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
 }
 
-ul ul::before { left: -11px; top: 0; bottom: 0; 
-} 
+ul ul::before {
+    left: -11px;
+}
 
 /* ---------- CODE BLOCK (EDIT MODE) ------------- */
 
@@ -291,9 +300,10 @@ ul ul::before { left: -11px; top: 0; bottom: 0;
     --color-tooltip-bg: #ffffff;
     --color-tooltip-border: #000000;
     --color-tooltip-label: #000000;
-    --font-family-editor: Avenir, "Avenir Next", "Avenir Next Cyr", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-    --font-family-preview: Avenir, "Avenir Next", "Avenir Next Cyr", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --font-family-editor: var(--default-font);
+    --font-family-preview: var(--default-font);
     --interactive-accent: rgb(205,133,63);
+    --interactive-accent-hover: rgb(205,133,63);
     --scrollbar-bg: rgba(0, 0, 0, 0);
     --scrollbar-thumb-bg: rgba(0, 0, 0, 0);
     --text-accent: rgb(205,133,63);
